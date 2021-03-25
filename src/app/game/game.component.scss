@@ -1,0 +1,26 @@
+#main-menu{
+    display: block;
+}
+
+#gameboard{
+    display: block;
+    width: 80%;
+    margin-top: 10vh;
+    // margin-left: 10vw;
+    .gamefield{
+        margin-left: 6vw;
+        
+        .gamecell{
+            width: 23vw;
+            height: 23vw;
+            border: 1px solid;
+            padding: 6px;
+        }
+    }
+
+    .state{
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+        font-size: larger;
+    }
+}

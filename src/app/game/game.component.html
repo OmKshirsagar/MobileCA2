@@ -1,0 +1,49 @@
+<div class="container pt-3">
+  <img src="../../assets/logo/logoG.gif" alt="logo" class="img-fluid mx-auto d-block">
+</div>
+
+<div *ngIf="mainmenu" id="main-menu">
+  <ion-text class="container text-center pt-5 mat-display-1">
+    <h1 class="display-1 font-weight-bolder" style="font-size: 1.3em;">Main Menu</h1>
+  </ion-text>
+  
+  <div class="container text-center" style="width: 80%; margin-top: 4em;">
+    <ion-button (click)="startGame()" expand="block" shape="round" color="primary" size="large">
+      Play
+    </ion-button>
+  </div>
+</div>
+
+<div *ngIf="gameboard" id="gameboard" class="container text-center">
+
+  <div class="gamefield">
+    <div class="row">
+      <div position='0' (click)="gameCellClick($event)" class="gamecell column-4" id="f0"></div>
+      <div position='1' (click)="gameCellClick($event)" class="gamecell column-4" id="f1"></div>
+      <div position='2' (click)="gameCellClick($event)" class="gamecell column-4" id="f2"></div>
+    </div>
+
+    <div class="row">
+      <div position='3' (click)="gameCellClick($event)" class="gamecell column-4" id="f3"></div>
+      <div position='4' (click)="gameCellClick($event)" class="gamecell column-4" id="f4"></div>
+      <div position='5' (click)="gameCellClick($event)" class="gamecell column-4" id="f5"></div>
+    </div> 
+
+    <div class="row">
+      <div position='6' (click)="gameCellClick($event)" class="gamecell column-4" id="f6"></div>
+      <div position='7' (click)="gameCellClick($event)" class="gamecell column-4" id="f7"></div>
+      <div position='8' (click)="gameCellClick($event)" class="gamecell column-4" id="f8"></div>
+    </div>
+  </div>
+
+  <div class="state container text-center">
+    {{Title}}
+  </div>
+
+  <div class="backbutton text-center" style="width: 90%; margin-left: 0;">
+    <ion-button (click)="backToMainMenu();" expand="block" shape="round" color="primary" size="large">
+      Back To Menu
+    </ion-button>
+  </div>
+
+</div>
