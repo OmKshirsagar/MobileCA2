@@ -1,23 +1,26 @@
+<!-- logo of the app -->
 <div class="container pt-3">
   <img src="../../assets/logo/logoG.gif" alt="logo" class="img-fluid mx-auto d-block">
 </div>
-
+<!-- Main menu container -->
 <div *ngIf="mainmenu" id="main-menu">
   <ion-text class="container text-center pt-5 mat-display-1">
     <h1 class="display-1 font-weight-bolder" style="font-size: 1.3em;">Main Menu</h1>
   </ion-text>
-  
+  <!-- play button to initialize the game -->
   <div class="container text-center" style="width: 80%; margin-top: 4em;">
     <ion-button (click)="startGame()" expand="block" shape="round" color="primary" size="large">
       Play
     </ion-button>
   </div>
 </div>
-
+<!-- Board Container -->
 <div *ngIf="gameboard" id="gameboard" class="container text-center">
-
+  <!-- Cells of the board -->
   <div class="gamefield">
     <div class="row">
+      <!-- Position is a attribute defined by me.(youtube reference) -->
+      <!-- On click call the gameCellClick method by passing the event which here is the onclick event.-->
       <div position='0' (click)="gameCellClick($event)" class="gamecell column-4" id="f0"></div>
       <div position='1' (click)="gameCellClick($event)" class="gamecell column-4" id="f1"></div>
       <div position='2' (click)="gameCellClick($event)" class="gamecell column-4" id="f2"></div>
@@ -35,11 +38,11 @@
       <div position='8' (click)="gameCellClick($event)" class="gamecell column-4" id="f8"></div>
     </div>
   </div>
-
+  <!-- Commentary box for the game -->
   <div class="state container text-center">
     {{Title}}
   </div>
-
+  <!-- Main menu button Container -->
   <div class="backbutton text-center" style="width: 90%; margin-left: 0;">
     <ion-button (click)="backToMainMenu();" expand="block" shape="round" color="primary" size="large">
       Back To Menu
